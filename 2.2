@@ -1,0 +1,17 @@
+#!/usr/bin/python
+#-*- coding: latin1 -*-
+
+''' Sortee 20 números enteros entre 1 y 100 una lista. Almacene los números
+pares en la lista PAR y los números ímpares en la lista IMPAR.
+Imprima las tres listas.'''
+
+from random import randint
+
+vector = [randint (1, 100) for x in range (20)]
+pares = [x for x in vector if x % 2 == 0]
+impares = [x for x in vector if x %2 == 1]
+print ('Vector: ' , vector)
+print ('Pares: ', pares)
+print ('Impares: ', impares)
+
+print ('Gracias, besitos')
