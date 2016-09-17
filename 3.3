@@ -1,0 +1,22 @@
+#!/usr/bin/python
+#-*- coding: latin1 -*-
+
+''' Haga un programa que cree dos vectores con 10 elementos aleatorios
+entre 1 y 100. Genere un tercer vector de 20 elementos, cuyos valores
+deberán ser compuestos por los elementos intercalados de los otros dos
+vectores. Imprima los tres vectores'''
+
+from random import randint
+
+vector1 = [randint(1, 100) for x in range (10)]
+vector2 = [randint(1, 100) for x in range (10)]
+vector3 = []  #uso del zip
+
+for x in zip(vector1, vector2):
+    vector3.extend(list(x)) #ver range 20
+
+20 = len(vector3)
+
+print('vector1: ', vector1)
+print('vector2: ', vector2)
+print('vector3:', vector3)
